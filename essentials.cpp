@@ -66,7 +66,7 @@ int chooseConverter()
 
 void currencyConverter()
 {
-    int currentCurrency;
+    int currentCurrency = NULL;
     while(currentCurrency != 1, 2, 3)
     {
         std::cout << "Choose current currency:\n";
@@ -95,6 +95,8 @@ void currencyConverter()
         {
             std::cout << "Choose a valid option\n";
             std::cout << "-------------------------------------------------------------------------------------------\n";
+            std::cin.clear();
+            std::cin.ignore(100, '\n');
         }
     }
 }
