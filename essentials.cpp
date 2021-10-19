@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "currencies.h"
 
 void name()
@@ -23,10 +24,10 @@ void inputAndCompare(std::string login, std::string pass)
     while (userLoginInput != login || userPassInput != pass)
     {
         std::cout << "Please enter your username: ";
-        std::cin >> userLoginInput;
+        std::getline(std::cin >> std::ws, userLoginInput);
 
         std::cout << "Please enter your password: ";
-        std::cin >> userPassInput;
+        std::getline(std::cin >> std::ws, userPassInput);
 
         if (userLoginInput == login && userPassInput == pass)
         {
@@ -42,11 +43,12 @@ void inputAndCompare(std::string login, std::string pass)
 int chooseConverter()
 {
     int choice = NULL;
-    while (choice != 1 && 9)
+    while (choice != 1 && 9 && 2)
     {
         std::cout << "-------------------------------------------------------------------------------------------\n";
         std::cout << "Choose which converter want to use:" << std::endl;
         std::cout << "1) Currency converter \n";
+        //std::cout << "2) Length converter \n";
         std::cout << "9) Exit\n";
         std::cout << "More coming soon...\n";
         std::cout << ": ";
@@ -56,9 +58,9 @@ int chooseConverter()
             exit(0);
         }
 
-        if (choice != 1 && 9)
+        else if (choice != 1 && 9 && 2)
         {
-            std::cout << "Choose valid option\n";
+            std::cout << "Choose a valid option\n";
         }
     }
     return choice;
@@ -99,4 +101,14 @@ void currencyConverter()
             std::cin.ignore(100, '\n');
         }
     }
+}
+
+void lengthConverter()
+{
+    std::cout << "Choose your current length:\n";
+    std::cout << "1) Kilometers\n";
+    std::cout << "2) Metres\n";
+    std::cout << "3) Centimeters\n";
+    std::cout << ": ";
+
 }

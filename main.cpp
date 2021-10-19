@@ -17,6 +17,10 @@ int main()
 		{
 			currencyConverter();
 		}
+		if (converterChoice == 2)
+		{
+			lengthConverter();
+		}
 	}
 
 }
