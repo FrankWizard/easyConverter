@@ -21,9 +21,6 @@
     <ClCompile Include="essentials.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Cconverter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="currencies.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

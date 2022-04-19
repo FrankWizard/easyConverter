@@ -139,7 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Cconverter.cpp" />
     <ClCompile Include="currencies.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="essentials.cpp" />
